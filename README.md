@@ -69,3 +69,38 @@ void loop() {
   digitalWrite(led6, LOW);
 }
 ```
+## Desafio 02
+![Desafio 2](desafio2-aula03.png)
+```
+
+int sensorLuminosidade = A0;
+
+int leds[] = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+
+void setup() {
+  for (int i = 0; i < 10; i++) {
+    pinMode(leds[i], OUTPUT);
+  }
+}
+
+void loop() {
+
+  int nivelDeLuz = analogRead(sensorLuminosidade);
+
+  int quantidadeLeds = map(nivelDeLuz, 0, 900, 10, 0);
+
+  quantidadeLeds = constrain(quantidadeLeds, 0, 10);
+
+  for (int i = 0; i < 10; i++) {
+
+    if (i < quantidadeLeds) {
+      digitalWrite(leds[i], HIGH);
+    } else {
+      digitalWrite(leds[i], LOW);
+    }
+
+  }
+
+  delay(50);
+}
+```
