@@ -1,15 +1,15 @@
 # Atividades-IOT
 
-# Tecnologias 
+## Tecnologias 
 - html, css, js 
 - Linguagem C, arduino
 - VsCode
 
-# Aula 02
-## Desafio sem arduino 
+## Aula 02
+### Desafio sem arduino 
 ![Desafio 1](aula02sem.png)
 
-## Desafio com arduino 
+### Desafio com arduino 
 ![Desafio 1](aula02com.png)
 ```
 int sensorLuminosidade = A0;
@@ -31,8 +31,8 @@ void loop() {
 ```
 
 
-# Aula 03
-## Desafio 01
+## Aula 03
+### Desafio 01
 ![Desafio 1](desafio1-aula03.png)
 ```
 
@@ -93,7 +93,7 @@ void loop() {
   digitalWrite(led6, LOW);
 }
 ```
-## Desafio 02
+### Desafio 02
 ![Desafio 2](desafio2-aula03.png)
 ```
 
@@ -129,7 +129,7 @@ void loop() {
 }
 ```
 
-# Aula 04
+## Aula 04
 ![Desafio 1](aula04.png)
 ```
 #include <Servo.h>
@@ -221,7 +221,7 @@ void numero(int coluna) {
 }
 ```
 
-# Desafio do simulador de portão eletrônico
+## Desafio do simulador de portão eletrônico
 ![Desafio](portao.png)
 
 ```
