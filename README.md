@@ -1,10 +1,29 @@
 # Atividades-IOT
 
+# Aula 02
+## Desafio sem arduino 
+![Desafio 1](aula02sem.png)
 
+## Desafio com arduino 
+![Desafio 1](aula02com.png)
+```
+int sensorLuminosidade = A0;
+int led = 9;
 
+void setup() {
+  pinMode(led, OUTPUT);
+}
 
+void loop() {
+  int nivelDeLuz = analogRead(sensorLuminosidade);
 
+  nivelDeLuz = map(nivelDeLuz, 0, 900, 255, 0);
+  nivelDeLuz = constrain(nivelDeLuz, 0, 255);
 
+  analogWrite(led, nivelDeLuz);
+}
+
+```
 
 
 # Aula 03
