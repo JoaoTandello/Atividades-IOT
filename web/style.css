@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f8fa;
+    color: #2f3640;
+}
+
+header {
+    text-align: center;
+    padding: 30px 15px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #3eae5a;
+    margin: 0 12px;
+}
+
+header h1 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #3eae5a;
+}
+
+main {
+    width: 82%;
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+.grafico {
+    width: 88%;
+    margin: 20px auto 0;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e1e5ea;
+}
+
+.grafico h2 {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: #718096;
+    margin-bottom: 12px;
+}
+
+.grafico canvas {
+    width: 100% !important;
+    height: 230px !important;
+}
+
+.semanal {
+    width: 52%;
+    margin-top: 28px;
+}
+
+.semanal h2 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #3eae5a;
+}
+
+.tabela {
+    width: 60%;
+    margin: 30px auto;
+    background-color: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,
+td {
+    border: 1px solid #e2e6ea;
+    padding: 16px 12px;
+}
+
+th {
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #eaf0f6;
+    color: #3eae5a;
+}
+
+td {
+    font-size: 14px;
+    color: #3eae5a;
+}
+
+tr:hover td {
+    background-color: #f5f8fb;
+}
+
+@media (max-width: 700px) {
+    main {
+        width: 92%;
+    }
+
+    .grafico,
+    .semanal,
+    .tabela {
+        width: 100%;
+    }
+
+    .grafico canvas {
+        height: 200px !important;
+    }
+
+    th,
+    td {
+        padding: 11px 6px;
+        font-size: 13px;
+    }
+
+    header {
+        margin: 0 5px;
+    }
+}
