@@ -1,5 +1,10 @@
 # Atividades-IOT
 
+# Tecnologias 
+- html, css, js 
+- Linguagem C, arduino
+- VsCode
+
 # Aula 02
 ## Desafio sem arduino 
 ![Desafio 1](aula02sem.png)
