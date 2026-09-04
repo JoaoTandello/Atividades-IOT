@@ -123,3 +123,95 @@ void loop() {
   delay(50);
 }
 ```
+
+# Aula 04
+![Desafio 1](aula04.png)
+```
+#include <Servo.h>
+
+Servo servo;
+
+int potenc = 0;
+int angulo = 0;
+
+void setup(){
+  servo.attach(11);
+}
+
+void loop() {
+  potenc = analogRead(0);
+  angulo = map(potenc, 0, 1023, 0, 180);
+  servo.write(angulo);
+  
+  delay(15);
+}
+```
+![Desafio 1](aula04.2.png)
+```
+int a = 4;
+int b = 5;
+int c = 6;
+int d = 7;
+int e = 8;
+int f = 9;
+int g = 10;
+
+int botao = 2;
+int num = 0;
+
+int entrada[7] = {a, b, c, d, e, f, g};
+
+int display[10][7] = {
+  {1, 1, 1, 1, 1, 1, 0},
+  {0, 1, 1, 0, 0, 0, 0},
+  {1, 1, 0, 1, 1, 0, 1},
+  {1, 1, 1, 1, 0, 0, 1},
+  {0, 1, 1, 0, 0, 1, 1},
+  {1, 0, 1, 1, 0, 1, 1},
+  {1, 0, 1, 1, 1, 1, 1},
+  {1, 1, 1, 0, 0, 0, 0},
+  {1, 1, 1, 1, 1, 1, 1},
+  {1, 1, 1, 1, 0, 1, 1}
+};
+
+void setup() {
+
+  for (int i = 0; i < 7; i++) {
+    pinMode(entrada[i], OUTPUT);
+  }
+
+  pinMode(botao, INPUT);
+
+  numero(0);
+}
+
+void loop() {
+
+  int click = digitalRead(botao);
+
+  if (click == HIGH) {
+
+    num++;
+
+    if (num >= 10) {
+      num = 0;
+    }
+
+    numero(num);
+
+    delay(300);
+  }
+}
+
+void numero(int coluna) {
+
+  for (int i = 0; i < 7; i++) {
+
+    if (display[coluna][i] == 1) {
+      digitalWrite(entrada[i], LOW);
+    } else {
+      digitalWrite(entrada[i], HIGH);
+    }
+  }
+}
+```
